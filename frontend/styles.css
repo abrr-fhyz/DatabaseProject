@@ -10,7 +10,7 @@ body {
     background-color: #f4f7fc;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     padding: 20px;
 }
@@ -36,8 +36,16 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+    background-color: #c7d1fc;
+    z-index: 10;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Rest of your styles remain unchanged */
 #search-bar {
     width: 75%;
     padding: 12px;

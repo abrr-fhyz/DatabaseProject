@@ -15,19 +15,19 @@ def generalSearch():
         select star.star_name, star.origin_system, upper(object.object_type), discovery.telescope_id, discovery.discovery_year 
         from star
         join object on star.object_id = object.object_id
-        join discovery on star.object_id = discovery.object_id 
+        left join discovery on star.object_id = discovery.object_id 
         where star.star_name LIKE :1
         UNION
         select planet.planet_name, planet.origin_system, upper(object.object_type), discovery.telescope_id, discovery.discovery_year  
         from planet
         join object on planet.object_id = object.object_id
-        join discovery on planet.object_id = discovery.object_id 
+        left join discovery on planet.object_id = discovery.object_id 
         where planet.planet_name LIKE :1
         UNION
         select miscellaneous.misc_name, miscellaneous.origin_system, upper(object.object_type), discovery.telescope_id, discovery.discovery_year  
         from miscellaneous
         join object on miscellaneous.object_id = object.object_id
-        join discovery on miscellaneous.object_id = discovery.object_id 
+        left join discovery on miscellaneous.object_id = discovery.object_id 
         where miscellaneous.misc_name like :1
     """
     cursor.execute(query, {'1': keyword + '%'})
