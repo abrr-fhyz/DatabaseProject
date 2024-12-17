@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." />
+            <select id="filter-dropdown" onchange="filterData()">
+                <option value="general">General Search</option>
+                <option value="planet">Planet Search</option>
+                <option value="star">Star Search</option>
+                <option value="misc">Misc Search</option>
+            </select>
+        </div>
+
+        <table id="results-table">
+            <thead id="table-head">
+                <tr>
+                    <th>Serial</th>
+                    <th>Object Name</th>
+                    <th>Category</th>
+                    <th>Object Location</th>
+                    <th>Discovering Telescope</th>
+                    <th>Discovery Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
