@@ -109,6 +109,12 @@ def searchMisc(keyword, connection):
         from miscellaneous
         join star_system on miscellaneous.origin_system = star_system.system_name
         where misc_name like :1
+        UNION
+        select satellite_name, planet.origin_system, 'Satellite', star_system.system_age
+        from satellite
+        join planet on satellite.parent_planet = planet.object_id
+        join star_system on planet.origin_system = star_system.system_name
+        where satellite_name like :1
     """
     cursor.execute(query, {'1': keyword + '%'})
 
