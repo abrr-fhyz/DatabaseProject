@@ -45,7 +45,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Rest of your styles remain unchanged */
+/* Search Bar */
 #search-bar {
     width: 75%;
     padding: 12px;
@@ -61,6 +61,7 @@ body {
     box-shadow: 0 0 8px rgba(91, 155, 213, 0.5);
 }
 
+/* Filter Dropdown */
 #filter-dropdown {
     width: 22%;
     padding: 12px;
@@ -75,6 +76,22 @@ body {
 #filter-dropdown:focus {
     border-color: #5b9bd5;
     box-shadow: 0 0 8px rgba(91, 155, 213, 0.5);
+}
+
+/* View Images Button */
+#view-images-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#view-images-btn:hover {
+    background-color: #4a88b6;
 }
 
 /* Table Styles */
@@ -119,7 +136,7 @@ tbody tr:nth-child(even) {
         align-items: stretch;
     }
 
-    #search-bar, #filter-dropdown {
+    #search-bar, #filter-dropdown, #view-images-btn {
         width: 100%;
         margin-bottom: 15px;
     }
@@ -143,4 +160,82 @@ tbody tr:nth-child(even) {
 tr:hover {
     transform: translateX(5px);
     transition: all 0.2s ease;
+}
+
+/* Image View Page Styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    min-height: 400px;
+    border: 2px solid #f1f1f1;
+    border-radius: 15px;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+#image-display {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons for Image Selection */
+.view-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.view-buttons button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-buttons button:hover {
+    background-color: #4a88b6;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #c7d1fc;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.dropdown-container select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.dropdown-container button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #5b9bd5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dropdown-container button:hover {
+    background-color: #4a88b6;
 }

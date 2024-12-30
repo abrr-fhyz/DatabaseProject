@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="view-buttons">
+            <button onclick="getTelescopeData()">Telescope Discovery</button>
+            <button onclick="coordinatePlot()">Coordinate Plot</button>
+            <button onclick="getPlanetData()">Planetary Systems</button>
+            <button onclick="getStellarData()">Stellar Distribution</button>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="coordinate-dropdown"><b>Select Star System:</b></label>
+            <select id="coordinate-dropdown" onchange="filterData()">
+                <option value="ss">The Solar System</option>
+                <option value="alpha">Alpha Centaurio</option>
+                <option value="aa">M31 System</option>
+                <option value="omega">Nexus System</option>
+            </select>
+            <button id="search-view-button" onclick="searchView()">Search View</button>
+        </div>
+
+        <div id="image-container" class="image-container">
+            <img id="image-display" src="/Year-2 Semester-2/CSE 2201/Project/images/galaxy.jpg" alt="Selected Image" />
+        </div>
+    </div>
+
+    <script src="analysis.js"></script>
+</body>
+</html>

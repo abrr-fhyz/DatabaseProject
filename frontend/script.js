@@ -264,3 +264,7 @@ function showMiscData(data) {
         dataList.appendChild(row);
       });
 }
+
+function switchToImageView() {
+    window.location.href = 'analysis_view.html'; 
+}
